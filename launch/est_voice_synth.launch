@@ -1,0 +1,6 @@
+<launch>
+
+<node name="soundplay_node" pkg="sound_play" type="soundplay_node.py"/>
+<node name="talker" pkg="est_voice_synth" type="talker" output="screen"/>
+<node name="listener" pkg="est_voice_synth" type="listener" output="screen"/>
+</launch>
