@@ -7,7 +7,7 @@
 #include "estsynth.h"
 
 
-sound_play::SoundClient* sc = 0; //eemaldada tärn ja väärtustaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamine. Sevice´í või action´ipõhine,
+sound_play::SoundClient* sc = 0; //eemaldada tärn ja väärtust. Sevice´í või action´ipõhine,
 using namespace std;
 using namespace std::chrono;
 
@@ -36,7 +36,7 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg)
   // Invoke the system call creating the .wav file from the text file
   char* text = new char[msg->data.length()];
   strcpy (text, msg->data.c_str());
-  size_t seconds = ess->convertTextToWave (text, "/home/kasutaja/synthts_et-master/synthts_et/out_tnu.wav");
+  size_t seconds = ess->convertTextToWave (text, "/home/jan/synthts_et-master/synthts_et/out_tnu.wav");
   delete[] text;
 
   ROS_INFO("Generated sound duration: [%li]", seconds);
@@ -52,7 +52,7 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg)
   //sc.playWaveFromPkg("sound_play", "sounds/BACKINGUP.ogg");
   //sc->stopAll();
   
-  sc->playWaveFromPkg("sound_play", "/home/kasutaja/synthts_et-master/synthts_et/out_tnu.wav");
+  sc->playWaveFromPkg("sound_play", "/home/jan/synthts_et-master/synthts_et/out_tnu.wav");
   sleep(seconds + 1);
   sc->stopAll();
   //sc->stopWaveFromPkg("sound_play", "/home/jan/synthts_et-master/synthts_et/out_tnu.wav");
@@ -100,8 +100,8 @@ int main(int argc, char **argv)
    * is the number of messages that will be buffered up before beginning to throw
    * away the oldest ones.
    */
-  ros::Subscriber sub = n.subscribe("chatter", 1, chatterCallback);
-  
+  ros::Subscriber sub = n.subscribe("estonian_voice", 1000, chatterCallback);
+
   /**
    * ros::spin() will enter a loop, pumping callbacks.  With this version, all
    * callbacks will be called from within this thread (the main one).  ros::spin()

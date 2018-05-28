@@ -204,12 +204,12 @@ catkin_package()
 ## Build talker and listener
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(talker src/talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
-add_dependencies(talker est_voice_synth_generate_messages_cpp)
+add_executable(tester src/tester.cpp)
+target_link_libraries(tester ${catkin_LIBRARIES})
+add_dependencies(tester est_voice_synth_generate_messages_cpp)
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES} -L../../src/est_voice_synth/libs/estsynth/lib -lestsynth -lEtAna -lFsc -lHTSEngine -lEtLab -lestsynth -lm)
-add_dependencies(listener est_voice_synth_generate_messages_cpp)
+add_executable(estonian_text2speech src/estonian_text2speech.cpp)
+target_link_libraries(estonian_text2speech ${catkin_LIBRARIES} -L../../src/est_voice_synth/libs/estsynth/lib -lestsynth -lEtAna -lFsc -lHTSEngine -lEtLab -lestsynth -lm)
+add_dependencies(estonian_text2speech est_voice_synth_generate_messages_cpp)
 
 

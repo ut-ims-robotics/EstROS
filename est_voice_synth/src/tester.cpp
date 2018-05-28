@@ -48,7 +48,7 @@ int main(int argc, char **argv)
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
+  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("estonian_voice", 1000);
 
   ros::Rate loop_rate(0.1);
 
@@ -66,9 +66,6 @@ int main(int argc, char **argv)
 
     std::stringstream ss;
     ss << "Tere, maailm " << count;
-    //ss << "Jupiteri suuruselt neljas kuu Europa paiskab tõepoolest võimsaid veepahvakuid maailmaruumi ";
-    /*ss << "Jupiteri suuruselt neljas kuu Europa paiskab vist tõepoolest aeg-ajalt võimsaid veepahvakuid maailmaruumi. Veepurskamise kahtlus sai uut tugevat kinnitust, kui teadlased vaatasid hoolikalt läbi andmed, mille NASA kosmoseaparaat Galileo enam kui kakskümmend aastat tagasi toimunud möödalennul kogus. Sellisel juhul aga pidi vesi Europalt paiskuma välja lausa mitmesaja kilomeetri kaugusele kosmose avarusse ";*/
-    /*ss << "Jupiteri suuruselt neljas kuu Europa paiskab vist tõepoolest võimsaid veepahvakuid maailmaruumi. Veepurskamise kahtlus sai uut tugevat kinnitust, kui teadlased vaatasid hoolikalt läbi andmed, mille NASA kosmoseaparaat Galileo enam kui kakskümmend aastat tagasi toimunud möödalennul kogus. Sellisel juhul aga pidi vesi Europalt paiskuma välja lausa mitmesaja kilomeetri kaugusele kosmose avarusse. Viimasel ajal on suurte veepursete märke Europal leidnud ka kosmoseteleskoop Hubble. Mõned teadlased on väitnud, et Europa, mille jääkoore all laiub suur veeookean, on üks Päikesesüsteemi paljutõotavamaid paiku, kust võiksime leida kohalikke elusolendeid. Veepursked annavad võimaluse neid spekulatsioone kontrollida, sest tulevased kosmoseaparaadid saaksid neist piisapilvedest proove võtta, millest elu märke otsida ";*/
     msg.data = ss.str();
     
     /*std::ofstream f("/home/jan/synthts_et-master/synthts_et/in.txt");
