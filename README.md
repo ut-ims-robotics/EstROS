@@ -17,21 +17,15 @@ Juhend wrapper-i kasutamiseks:
 * Kui soovid jooksutada pikemaid .wav faile kui 10 sekundit, siis tuleks soundplay_node.py failis muuta 
 
 def get_staleness(self):
-.....
-position = self.sound.query_position(Gst.Format.TIME)[1] # Muuda 0 -> 1
-duration = self.sound.query_duration(Gst.Format.TIME)[1] # Muuda 0 -> 1 
-......
-except Exception, e:
-position = 0
-duration = 0
-finally:
-    self.lock.release()
 
-if position != duration: 
-    self.staleness = 0
-else:  
-    self.staleness = self.staleness + 1
-    return self.staleness
+.....
+
+position = self.sound.query_position(Gst.Format.TIME)[1] # Muuda 0 -> 1
+
+duration = self.sound.query_duration(Gst.Format.TIME)[1] # Muuda 0 -> 1 
+
+......
+
 (allikas: https://github.com/ros-drivers/audio_common/issues/96)
 
 __
@@ -55,21 +49,15 @@ Guide:
 Modifications are following:
 
 def get_staleness(self):
-.....
-position = self.sound.query_position(Gst.Format.TIME)[1] # HERE change from 0 to 1
-duration = self.sound.query_duration(Gst.Format.TIME)[1] # HERE change from 0 to 1 
-......
-except Exception, e:
-position = 0
-duration = 0
-finally:
-    self.lock.release()
 
-if position != duration: # Seems like it checks that the seeker in end or not? 
-    self.staleness = 0
-else: # If the file was played until the end, Increase staleness 
-    self.staleness = self.staleness + 1
-    return self.staleness
+.....
+
+position = self.sound.query_position(Gst.Format.TIME)[1] # HERE change from 0 to 1
+
+duration = self.sound.query_duration(Gst.Format.TIME)[1] # HERE change from 0 to 1 
+
+......
+
 (source: https://github.com/ros-drivers/audio_common/issues/96 ) 
 
 
