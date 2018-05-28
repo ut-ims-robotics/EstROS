@@ -1,5 +1,5 @@
 <launch>
 <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py"/>
-<node name="talker" pkg="est_voice_synth" type="talker"/>
-<node name="listener" pkg="est_voice_synth" type="listener"/>
+<node name="tester" pkg="est_voice_synth" type="tester"/>
+<node name="estonian_text2speech" pkg="est_voice_synth" type="estonian_text2speech"/>
 </launch>
