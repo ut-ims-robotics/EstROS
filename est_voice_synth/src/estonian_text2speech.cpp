@@ -111,7 +111,7 @@ int main(int argc, char **argv)
    sc = new sound_play::SoundClient ();
    
    ess = new EstonianSpeechSynthesis();
-   ess->initialize();
+   ess->initialize("src/est_voice_synth/htsvoices/eki_et_eva.htsvoice");
    
    
   ros::spin();

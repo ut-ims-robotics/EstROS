@@ -22,7 +22,7 @@ class EstonianSpeechSynthesis {
 
 public:
     EstonianSpeechSynthesis ();
-    bool initialize();
+    bool initialize(const char* voiceFileName);
     bool destroy();
     size_t convertTextToWave (char* textToSpeak, const char* wavfilename);
 };
