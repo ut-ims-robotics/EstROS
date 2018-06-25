@@ -11,8 +11,8 @@ Juhend wrapper-i kasutamiseks:
 * Muuda .wav failide loomise asukohta oma tööruumis. Selleks muuda failis your_catkin_workspace/src/est_voice_synthts/src/listener.cpp ridade 39 ja 55 parameetreid. (Pilt!)
 * Kopeeri synthts_et-master kaust github-ist (https://github.com/ut-ims-robotics/synthts_et) catkin_workspace kaustast üks tase kõrgemale.
 * Kopeeri dct kaust synthts_et-master/synthts_et kasutast oma catkin tööruumi peakasuta (main folder).
+* Installeeri http://wiki.ros.org/audio_common
 * Käivita catkin_make käsk oma tööruumil.
-* Intalleeri http://wiki.ros.org/audio_common kaust (nagu igat teist programmi, ei pea olema catkin tööruumis) ja testi, kas see töötab.
 * Programmi saab testida jooksutades käsku roslaunch est_voice_synth est_voice_synth.launch catkin kaustas. 
 * Kui soovid jooksutada pikemaid .wav faile kui 10 sekundit, siis tuleks soundplay_node.py failis muuta 
 
