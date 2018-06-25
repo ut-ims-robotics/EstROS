@@ -209,7 +209,7 @@ target_link_libraries(tester ${catkin_LIBRARIES})
 add_dependencies(tester est_voice_synth_generate_messages_cpp)
 
 add_executable(estonian_text2speech src/estonian_text2speech.cpp)
-target_link_libraries(estonian_text2speech ${catkin_LIBRARIES} -L../../src/est_voice_synth/libs/estsynth/lib -lestsynth -lEtAna -lFsc -lHTSEngine -lEtLab -lestsynth -lm)
+target_link_libraries(estonian_text2speech ${catkin_LIBRARIES} -L${PROJECT_SOURCE_DIR}/libs/estsynth/lib -lestsynth -lEtAna -lFsc -lHTSEngine -lEtLab -lestsynth -lm)
 add_dependencies(estonian_text2speech est_voice_synth_generate_messages_cpp)
 
 
