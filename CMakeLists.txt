@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(est_voice_synth)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11 -I../../src/est_voice_synth/libs/estsynth/include)
+add_compile_options(-std=c++11 -I${PROJECT_SOURCE_DIR}/libs/estsynth/include)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
