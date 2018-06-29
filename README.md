@@ -28,7 +28,7 @@ cd ~
 git clone https://github.com/ut-ims-robotics/synthts_et-master.git
 ```
 
-4. Kopeeri kloonitud synthts_et-master koodihoidlast kaust nimega dct oma catkin tööruumi peakausta (catkin_ws)
+4. Kopeeri kloonitud [synthts_et-master](https://github.com/ut-ims-robotics/synthts_et-master) koodihoidlast kaust nimega dct oma catkin tööruumi peakausta (catkin_ws)
 
 5. Installeeri [Audio common](http://wiki.ros.org/audio_common) ROS pakett.
 
