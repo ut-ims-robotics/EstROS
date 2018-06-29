@@ -65,7 +65,7 @@ duration = self.sound.query_duration(Gst.Format.TIME)[1] # Muuda siin 0 üheks n
 
 # Institute of the Estonian Language (EKI) speech synthesizer installation guide for ROS
 
-This installation guide is meant to help you use the EKI speech synthesizer on the ROS operation system using the [soundplay](https://github.com/ros-drivers/audio_common/tree/master/sound_play). It was created during the course called Robotics Engineering Project in University of Tartu. The current wrapper is designed to work on [ROS Kinetic Kame](http://wiki.ros.org/kinetic).
+This installation guide is meant to help you use the EKI speech synthesizer on the ROS operation system using the [soundplay](https://github.com/ros-drivers/audio_common/tree/master/sound_play) package. It was created during the course called Robotics Engineering Project in University of Tartu. The current wrapper is designed to work on [ROS Kinetic Kame](http://wiki.ros.org/kinetic).
 
 
 Installation guide:
