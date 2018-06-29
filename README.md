@@ -118,7 +118,13 @@ source devel/setup.bash
 roslaunch est_voice_synth est_voice_synth.launch 
 ```
 
-8. (OPTIONAL) If you wish to play `.wav` that are longer than 10 seconds then you need fix a [common bug](https://github.com/ros-drivers/audio_common/issues/96) within the `soundplay_node.py` file. The node should be located in at `/opt/ros/kinetic/lib/sound_play/soundplay_node.py` However you can also use the following command to find it `sudo find / -name soundplay_node.py`
+8. The `estonian_text2speech` node is now waiting for string data under the `/estonian_voice` topic and generates a `.wav` accordingly. The easiest way to check if everything is working properly is to manually publsih a string to that topic and listen to the generated `.wav` file.
+
+```bash
+rostopic pub /estonian_voice "turn this string into sound"
+```
+
+9. (OPTIONAL) If you wish to play a `.wav` that is longer than 10 seconds then you need fix a [common bug](https://github.com/ros-drivers/audio_common/issues/96) within the `soundplay_node.py` file. The node should be located in at `/opt/ros/kinetic/lib/sound_play/soundplay_node.py` However you can also use the following command to find it `sudo find / -name soundplay_node.py`
 
 ```python
 def get_staleness(self):
