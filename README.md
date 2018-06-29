@@ -51,7 +51,7 @@ roslaunch est_voice_synth est_voice_synth.launch
 ```
 
 8. (VALIKULINE) Kui soovid jooksutada pikemaid `.wav` faile kui 10 sekundit, siis tuleks kõrvaldada üks [levinud probleem](https://github.com/ros-drivers/audio_common/issues/96)
- `soundplay_node.py` failis. See peaks asuma asukohas `/opt/ros/kinetic/lib/sound_play/soundplay_node.py` Kuid selle leidmiseks võib ka kasutada käsku `sudo find / -name soundplay_node.py`
+ `soundplay_node.py` failis. See peaks asuma asukohas `/opt/ros/kinetic/lib/sound_play/soundplay_node.py`, kuid selle leidmiseks võib ka kasutada käsku `sudo find / -name soundplay_node.py`
 
 ```python
 def get_staleness(self):
