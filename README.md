@@ -1,7 +1,7 @@
 # EKI kõnesüntesaatori intalleerimise juhend ROSile 
 ## English instructions below 
 
-Antud juhend on loodud EKI kõnesüntesaatori kasutamiseks ROS operatsiooni süsteemil, kasutades Tartu Ülikooli Robootika projekti raames loodud ROSi [soundplay](https://github.com/ros-drivers/audio_common/tree/master/sound_play) wrapper-it. Wrapper on loodud töötama [ROS Kinetic Kame](http://wiki.ros.org/kinetic) versioonil.
+Antud juhend on loodud EKI kõnesüntesaatori kasutamiseks ROSis, kasutades Tartu Ülikooli Robootika projekti raames loodud ROSi wrapperit ja [soundplay](https://github.com/ros-drivers/audio_common/tree/master/sound_play) paketti. Wrapper on loodud töötama [ROS Kinetic Kame](http://wiki.ros.org/kinetic) versioonil.
 
 
 Juhend kasutamiseks:
