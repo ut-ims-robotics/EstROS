@@ -36,7 +36,7 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg)
   // Invoke the system call creating the .wav file from the text file
   char* text = new char[msg->data.length()];
   strcpy (text, msg->data.c_str());
-  size_t seconds = ess->convertTextToWave (text, "/home/jan/synthts_et-master/synthts_et/out_tnu.wav");
+  size_t seconds = ess->convertTextToWave (text, "/home/lndrolominadze/Documents/pepper_ws/gen_synth_files/est_synth.wav");
   delete[] text;
 
   ROS_INFO("Generated sound duration: [%li]", seconds);
@@ -52,7 +52,7 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg)
   //sc.playWaveFromPkg("sound_play", "sounds/BACKINGUP.ogg");
   //sc->stopAll();
   
-  sc->playWaveFromPkg("sound_play", "/home/jan/synthts_et-master/synthts_et/out_tnu.wav");
+  sc->playWaveFromPkg("sound_play", "/home/lndrolominadze/Documents/pepper_ws/gen_synth_files/est_synth.wav");
   sleep(seconds + 1);
   sc->stopAll();
   //sc->stopWaveFromPkg("sound_play", "/home/jan/synthts_et-master/synthts_et/out_tnu.wav");

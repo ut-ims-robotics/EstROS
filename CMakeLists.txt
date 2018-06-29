@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(est_voice_synth)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11 -I../../src/est_voice_synth/libs/estsynth/include)
+add_compile_options(-std=c++11 -I${PROJECT_SOURCE_DIR}/libs/estsynth/include)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -209,7 +209,7 @@ target_link_libraries(tester ${catkin_LIBRARIES})
 add_dependencies(tester est_voice_synth_generate_messages_cpp)
 
 add_executable(estonian_text2speech src/estonian_text2speech.cpp)
-target_link_libraries(estonian_text2speech ${catkin_LIBRARIES} -L../../src/est_voice_synth/libs/estsynth/lib -lestsynth -lEtAna -lFsc -lHTSEngine -lEtLab -lestsynth -lm)
+target_link_libraries(estonian_text2speech ${catkin_LIBRARIES} -L${PROJECT_SOURCE_DIR}/libs/estsynth/lib -lestsynth -lEtAna -lFsc -lHTSEngine -lEtLab -lestsynth -lm)
 add_dependencies(estonian_text2speech est_voice_synth_generate_messages_cpp)
 
 
