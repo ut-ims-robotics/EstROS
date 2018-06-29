@@ -49,8 +49,13 @@ catkin_make
 source devel/setup.bash
 roslaunch est_voice_synth est_voice_synth.launch 
 ```
+8. Nüüd ootab sõlm nimega `estonian_text2speech` teema all nimega `/estonian_voice` sõne, mida `.wav` failiks sünteesida. Kõige kiiremini saab testida sõlme korrektset tööd väljastades vastavale teemale sõne ning kuulata valminud `.wav`faili.
 
-8. (VALIKULINE) Kui soovid jooksutada pikemaid `.wav` faile kui 10 sekundit, siis tuleks kõrvaldada üks [levinud probleem](https://github.com/ros-drivers/audio_common/issues/96)
+```bash
+rostopic pub /estonian_voice "Sünteesi jutumärkides olev tekst"
+```
+
+9. (VALIKULINE) Kui soovid jooksutada pikemaid `.wav` faile kui 10 sekundit, siis tuleks kõrvaldada üks [levinud probleem](https://github.com/ros-drivers/audio_common/issues/96)
  `soundplay_node.py` failis. See peaks asuma asukohas `/opt/ros/kinetic/lib/sound_play/soundplay_node.py`, kuid selle leidmiseks võib ka kasutada käsku `sudo find / -name soundplay_node.py`
 
 ```python
