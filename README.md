@@ -21,7 +21,7 @@ size_t seconds = ess->convertTextToWave (text, "/abs_path_to_gen_wav/est_synth.w
 sc->playWaveFromPkg("sound_play", "/abs_path_to_gen_wav/est_synth.wav");
 ```
 
-3. Klooni [synthts_et-master]((https://github.com/ut-ims-robotics/synthts_et)) koodihoidla Githubist kusagile oma arvutisse.
+3. Klooni [synthts_et-master](https://github.com/ut-ims-robotics/synthts_et) koodihoidla Githubist kusagile oma arvutisse.
 
 ```bash
 cd ~
@@ -84,7 +84,7 @@ size_t seconds = ess->convertTextToWave (text, "/abs_path_to_gen_wav/est_synth.w
 sc->playWaveFromPkg("sound_play", "/abs_path_to_gen_wav/est_synth.wav");
 ```
 
-3. Clone [synthts_et-master]((https://github.com/ut-ims-robotics/synthts_et)) repository from Githubist to somewhere in your computer.
+3. Clone [synthts_et-master](https://github.com/ut-ims-robotics/synthts_et) repository from Githubist to somewhere in your computer.
 
 ```bash
 cd ~
